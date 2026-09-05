@@ -1,0 +1,414 @@
+[
+  {
+    "id": "proj-campus-assistant",
+    "title": "AI Campus Assistant",
+    "tagline": "Intelligent multi-agent chatbot for university courses, exams, fees, and academic circulars.",
+    "domain": "Education & AI",
+    "branch": "CSE / IT",
+    "difficulty": "Intermediate",
+    "teamSize": "2-3 Students",
+    "duration": "12 Weeks (3 Months)",
+    "problem": "University students struggle to navigate fragmented campus portals, outdated PDF circulars, and delayed administrative responses regarding exam timetables, fee dues, course syllabi, and hostel services.",
+    "solution": "A centralized, conversational AI campus portal integrating Retrieval-Augmented Generation (RAG) over official college circulars, document question answering, fee reminders, and role-based student query ticketing.",
+    "targetUsers": "Undergraduate/Postgraduate Students, Faculty, Academic Advisors, and Administrative Staff.",
+    "scores": {
+      "skillMatch": 94,
+      "innovation": 86,
+      "difficulty": "Medium",
+      "realWorldUse": 95,
+      "resumeValue": 92,
+      "completionFeasibility": 89
+    },
+    "features": {
+      "basic": [
+        "Student Registration & JWT Authentication",
+        "Role-Based Access Control (Student vs Admin/Faculty)",
+        "Conversational Chat Interface with chat history",
+        "Categorized FAQ System with fast keyword search",
+        "Admin Circular & Notice Board Upload"
+      ],
+      "advanced": [
+        "RAG over College Handbooks & Circulars (PDF parsing & vector search)",
+        "Voice Input & Speech-to-Text query submission",
+        "Personalized Academic Reminders (Internal exams, fee deadlines, hall tickets)",
+        "Context-Aware Document Answering with source citations"
+      ],
+      "future": [
+        "Official WhatsApp & Telegram Bot integration",
+        "Multilingual Support for regional languages",
+        "Biometric or Student ERP integration",
+        "Campus navigation with interactive 3D floor maps"
+      ]
+    },
+    "techStack": {
+      "frontend": {
+        "name": "React + Tailwind CSS",
+        "rationale": "Enables a responsive, accessible mobile-friendly dashboard with rapid UI prototyping."
+      },
+      "backend": {
+        "name": "FastAPI (Python)",
+        "rationale": "Asynchronous high-performance Python framework with native async support for AI/LLM streaming."
+      },
+      "database": {
+        "name": "PostgreSQL + pgvector / ChromaDB",
+        "rationale": "Relational integrity for user data and fast vector similarity search for campus circular RAG."
+      },
+      "ai": {
+        "name": "Google Gemini API / LangChain / HuggingFace Embeddings",
+        "rationale": "High context window for long academic PDF circulars and cost-effective embeddings."
+      },
+      "deployment": {
+        "name": "Docker + Render / Vercel",
+        "rationale": "Free tier friendly, zero-downtime deployments with containerized reproducibility."
+      }
+    },
+    "roadmap": [
+      {
+        "phase": "Phase 1: Problem Definition & Research",
+        "weeks": "Week 1",
+        "tasks": [
+          { "task": "Survey 30+ students on campus portal friction points", "completed": true },
+          { "task": "Collect official college circulars, rulebooks, and course syllabi", "completed": true },
+          { "task": "Draft System Requirements Specification (SRS)", "completed": true }
+        ]
+      },
+      {
+        "phase": "Phase 2: UI/UX & Prototypes",
+        "weeks": "Weeks 2-3",
+        "tasks": [
+          { "task": "Design Wireframes in Figma for Student & Admin views", "completed": true },
+          { "task": "Build responsive Chat Interface with message bubbles", "completed": true },
+          { "task": "Create Student Dashboard and Notice Explorer", "completed": false }
+        ]
+      },
+      {
+        "phase": "Phase 3: Backend & Database Architecture",
+        "weeks": "Weeks 4-6",
+        "tasks": [
+          { "task": "Set up PostgreSQL database schema and migrations", "completed": false },
+          { "task": "Implement JWT student authentication & authorization", "completed": false },
+          { "task": "Develop CRUD APIs for notices, user profiles, and chat logs", "completed": false }
+        ]
+      },
+      {
+        "phase": "Phase 4: AI & RAG Pipeline Integration",
+        "weeks": "Weeks 7-9",
+        "tasks": [
+          { "task": "Implement PDF text extraction and semantic chunking", "completed": false },
+          { "task": "Generate vector embeddings and store in vector database", "completed": false },
+          { "task": "Build prompt engineering pipeline with ground truth citation", "completed": false },
+          { "task": "Integrate Google Gemini API with fallback handling", "completed": false }
+        ]
+      },
+      {
+        "phase": "Phase 5: Evaluation & Testing",
+        "weeks": "Weeks 10-11",
+        "tasks": [
+          { "task": "Perform RAG retrieval accuracy and hallucination checks", "completed": false },
+          { "task": "Conduct unit testing on authentication & API endpoints", "completed": false },
+          { "task": "User acceptance testing with 10 peer students", "completed": false }
+        ]
+      },
+      {
+        "phase": "Phase 6: Final Deployment & Documentation",
+        "weeks": "Week 12",
+        "tasks": [
+          { "task": "Deploy backend to Render and frontend to Vercel", "completed": false },
+          { "task": "Prepare final academic project report & slide deck", "completed": false },
+          { "task": "Record working demo video and prepare viva presentation", "completed": false }
+        ]
+      }
+    ],
+    "improvements": [
+      {
+        "category": "Missing Features",
+        "suggestion": "Add automated email notifications to faculty mentors when students report recurring grievances."
+      },
+      {
+        "category": "Performance",
+        "suggestion": "Implement Redis caching for top 50 common campus questions to achieve sub-50ms response times."
+      },
+      {
+        "category": "Security",
+        "suggestion": "Enforce strict student email domain validation (@college.edu) and sanitize PDF uploads against malware."
+      },
+      {
+        "category": "UI / UX",
+        "suggestion": "Incorporate a dark mode switch and quick-reply chips for trending topics like 'Exam Schedule' and 'Library Timings'."
+      },
+      {
+        "category": "AI Improvements",
+        "suggestion": "Implement multi-turn conversation memory with hybrid search (BM25 keyword + dense vector embeddings) for higher precision."
+      },
+      {
+        "category": "Scalability & Future Scope",
+        "suggestion": "Migrate to asynchronous Celery worker queues for batch PDF processing during semester circular release spikes."
+      }
+    ]
+  },
+  {
+    "id": "proj-mediscan",
+    "title": "MediScan: Clinical Report & Symptom AI",
+    "tagline": "Explainable medical diagnostic assistant simplifying lab reports and triage recommendations.",
+    "domain": "Healthcare & AI",
+    "branch": "CSE / AI / Data Science",
+    "difficulty": "Advanced",
+    "teamSize": "2-4 Students",
+    "duration": "16 Weeks (4 Months)",
+    "problem": "Patients often struggle to understand complex clinical laboratory blood tests and pathology reports, leading to anxiety or missed critical markers before consulting a doctor.",
+    "solution": "An OCR-enabled diagnostic portal that extracts blood test markers, flags abnormal ranges in layman terms, provides preliminary triage assessments, and produces printable doctor summary briefs.",
+    "targetUsers": "Patients, caregivers, telemedicine triage staff, and general health clinic visitors.",
+    "scores": {
+      "skillMatch": 88,
+      "innovation": 93,
+      "difficulty": "Hard",
+      "realWorldUse": 96,
+      "resumeValue": 95,
+      "completionFeasibility": 84
+    },
+    "features": {
+      "basic": [
+        "Patient Profile & Medical History Record",
+        "Prescription/Report Image & PDF Upload",
+        "Basic Tesseract / Vision OCR extraction",
+        "Normal vs Abnormal Value Highlighting"
+      ],
+      "advanced": [
+        "Multimodal Medical LLM reasoning for differential explanations",
+        "Interactive Biomarker Trend Charts across historical visits",
+        "Emergency Red-Flag detector with immediate caution alerts",
+        "Automated Doctor Summary sheet generator"
+      ],
+      "future": [
+        "Wearable device telemetry sync (Apple Health / Google Fit)",
+        "HIPAA/GDPR compliant cryptographic report storage",
+        "Direct Tele-consultation appointment booking"
+      ]
+    },
+    "techStack": {
+      "frontend": {
+        "name": "Next.js / React + Chart.js",
+        "rationale": "High performance server-rendered dashboards with interactive visual health trend charts."
+      },
+      "backend": {
+        "name": "Python FastAPI + Celery",
+        "rationale": "Robust async processing for heavy image preprocessing and OCR extraction pipelines."
+      },
+      "database": {
+        "name": "PostgreSQL with encrypted JSONB fields",
+        "rationale": "Flexible semi-structured lab test parameters with strict relational patient mapping."
+      },
+      "ai": {
+        "name": "Gemini 1.5 Flash Vision / PyTesseract / HuggingFace BioGPT",
+        "rationale": "Native multimodal comprehension of scanned lab sheets and specialized medical terminology."
+      },
+      "deployment": {
+        "name": "AWS EC2 / GCP Cloud Run with S3 for encrypted storage",
+        "rationale": "Compliant bucket storage with pre-signed URLs for sensitive diagnostic reports."
+      }
+    },
+    "roadmap": [
+      {
+        "phase": "Phase 1: Clinical Data Research & Compliance",
+        "weeks": "Weeks 1-2",
+        "tasks": [
+          { "task": "Study standard CBC, Lipid, and Metabolic blood panel formats", "completed": true },
+          { "task": "Define disclaimer and ethical boundaries for AI diagnostic support", "completed": true }
+        ]
+      },
+      {
+        "phase": "Phase 2: Vision & OCR Engine",
+        "weeks": "Weeks 3-5",
+        "tasks": [
+          { "task": "Implement image deskewing and adaptive thresholding pipeline", "completed": false },
+          { "task": "Extract tabular parameters using Vision API", "completed": false }
+        ]
+      },
+      {
+        "phase": "Phase 3: Clinical Reasoning & Explanations",
+        "weeks": "Weeks 6-9",
+        "tasks": [
+          { "task": "Build biomarker reference database (normal ranges by age/gender)", "completed": false },
+          { "task": "Prompt pipeline for simplified layman explanation synthesis", "completed": false }
+        ]
+      },
+      {
+        "phase": "Phase 4: Dashboard & Patient Portal",
+        "weeks": "Weeks 10-12",
+        "tasks": [
+          { "task": "Build trend charts for cholesterol, glucose, and hemoglobin", "completed": false },
+          { "task": "Generate 1-click printable Doctor PDF Brief", "completed": false }
+        ]
+      },
+      {
+        "phase": "Phase 5: Verification & Safety Guardrails",
+        "weeks": "Weeks 13-14",
+        "tasks": [
+          { "task": "Test against 50 anonymized public lab report samples", "completed": false },
+          { "task": "Implement mandatory clinical disclaimers and safety alerts", "completed": false }
+        ]
+      },
+      {
+        "phase": "Phase 6: Deployment & Viva Defense",
+        "weeks": "Weeks 15-16",
+        "tasks": [
+          { "task": "Deploy cloud infrastructure with HTTPS & encrypted uploads", "completed": false },
+          { "task": "Compile final project documentation & research paper draft", "completed": false }
+        ]
+      }
+    ],
+    "improvements": [
+      {
+        "category": "Missing Features",
+        "suggestion": "Add drug-drug interaction checker when patients input active medication lists."
+      },
+      {
+        "category": "Performance",
+        "suggestion": "Implement WebP image compression in frontend before uploading large scanned documents."
+      },
+      {
+        "category": "Security",
+        "suggestion": "Strip all EXIF metadata and PII from uploaded images before processing."
+      },
+      {
+        "category": "AI Improvements",
+        "suggestion": "Provide confidence scores for every extracted biomarker to prevent OCR misreads."
+      },
+      {
+        "category": "Scalability & Future Scope",
+        "suggestion": "Integrate HL7 / FHIR data standards for interoperability with hospital Electronic Health Records (EHR)."
+      }
+    ]
+  },
+  {
+    "id": "proj-agrosense",
+    "title": "AgroSense: IoT & Vision Crop Health Predictor",
+    "tagline": "Precision agriculture system predicting plant diseases and recommending optimal irrigation.",
+    "domain": "IoT & Agriculture",
+    "branch": "ECE / CSE / EEE",
+    "difficulty": "Intermediate",
+    "teamSize": "3-4 Students",
+    "duration": "14 Weeks (3.5 Months)",
+    "problem": "Smallholder farmers suffer severe crop losses due to undetected early-stage fungal/bacterial leaf infections and inefficient flood irrigation leading to water wastage.",
+    "solution": "An integrated IoT micro-station that monitors soil moisture, temperature, and humidity, paired with a mobile-friendly vision classifier identifying 38 leaf diseases with organic treatment plans.",
+    "targetUsers": "Farmers, agricultural extension workers, greenhouse operators, and agritech researchers.",
+    "scores": {
+      "skillMatch": 91,
+      "innovation": 90,
+      "difficulty": "Medium",
+      "realWorldUse": 97,
+      "resumeValue": 93,
+      "completionFeasibility": 87
+    },
+    "features": {
+      "basic": [
+        "ESP32 / Arduino sensor data telemetry (Soil moisture, DHT11)",
+        "Mobile-responsive farmer dashboard",
+        "Leaf photo upload for disease screening",
+        "Basic Weather forecast widget"
+      ],
+      "advanced": [
+        "Computer vision leaf disease diagnosis (CNN / MobileNetV3)",
+        "Automated solenoid valve trigger based on soil moisture threshold",
+        "Organic and chemical treatment dosage calculator",
+        "SMS alert notification for urgent frost or disease risks"
+      ],
+      "future": [
+        "Drone thermal imaging feed integration",
+        "Localized mandi price forecasting using time-series ML",
+        "Solar-powered offline edge AI device (Raspberry Pi / Jetson Nano)"
+      ]
+    },
+    "techStack": {
+      "frontend": {
+        "name": "PWA (Progressive Web App) with Vite + Tailwind",
+        "rationale": "Enables offline capability and home-screen installation on low-end Android smartphones."
+      },
+      "backend": {
+        "name": "Node.js / Express or Python Flask with MQTT Broker",
+        "rationale": "Lightweight MQTT protocol handling for low-bandwidth IoT sensor telemetry."
+      },
+      "database": {
+        "name": "InfluxDB / TimescaleDB (Time series) + SQLite",
+        "rationale": "Optimized for continuous sensor readings and environmental metrics over months."
+      },
+      "ai": {
+        "name": "TensorFlow Lite / MobileNetV3 (PlantVillage dataset)",
+        "rationale": "Ultra-lightweight deep learning model capable of fast inference on low-latency connections."
+      },
+      "deployment": {
+        "name": "HiveMQ Cloud (MQTT) + Railway / Render",
+        "rationale": "Reliable IoT broker with zero maintenance overhead for student budgets."
+      }
+    },
+    "roadmap": [
+      {
+        "phase": "Phase 1: Hardware Selection & Circuit Design",
+        "weeks": "Weeks 1-2",
+        "tasks": [
+          { "task": "Procure ESP32, capacitive soil sensor, and DHT22", "completed": true },
+          { "task": "Assemble breadboard prototype and test sensor readings", "completed": true }
+        ]
+      },
+      {
+        "phase": "Phase 2: IoT Telemetry & MQTT Pipeline",
+        "weeks": "Weeks 3-5",
+        "tasks": [
+          { "task": "Program ESP32 WiFi & MQTT publish routines", "completed": false },
+          { "task": "Set up cloud MQTT broker and persistent time-series logging", "completed": false }
+        ]
+      },
+      {
+        "phase": "Phase 3: Machine Learning Model Training",
+        "weeks": "Weeks 6-8",
+        "tasks": [
+          { "task": "Curate PlantVillage dataset (Tomato, Potato, Corn)", "completed": false },
+          { "task": "Fine-tune MobileNetV3 with data augmentation", "completed": false },
+          { "task": "Export model to TFLite for fast server inference", "completed": false }
+        ]
+      },
+      {
+        "phase": "Phase 4: Farmer Web Portal & PWA",
+        "weeks": "Weeks 9-11",
+        "tasks": [
+          { "task": "Build mobile-first leaf camera capture interface", "completed": false },
+          { "task": "Implement offline caching for treatment guidelines", "completed": false }
+        ]
+      },
+      {
+        "phase": "Phase 5: Field Testing & Calibration",
+        "weeks": "Weeks 12-13",
+        "tasks": [
+          { "task": "Test sensor durability in real soil conditions", "completed": false },
+          { "task": "Validate disease accuracy on 30 freshly plucked leaves", "completed": false }
+        ]
+      },
+      {
+        "phase": "Phase 6: Final Demonstration & Viva",
+        "weeks": "Week 14",
+        "tasks": [
+          { "task": "Package hardware prototype inside weather-resistant 3D printed enclosure", "completed": false },
+          { "task": "Submit final documentation and demonstration video", "completed": false }
+        ]
+      }
+    ],
+    "improvements": [
+      {
+        "category": "Missing Features",
+        "suggestion": "Include localized vernacular audio voice notes for illiterate farm laborers."
+      },
+      {
+        "category": "Performance",
+        "suggestion": "Implement deep sleep power-saving mode on ESP32 to run on a single 18650 battery for 6+ months."
+      },
+      {
+        "category": "AI Improvements",
+        "suggestion": "Add multi-disease co-infection classification and severity percentage calculation."
+      },
+      {
+        "category": "Scalability",
+        "suggestion": "Support LoRaWAN mesh networking for long-distance connectivity in remote farms without 4G."
+      }
+    ]
+  }
+]
