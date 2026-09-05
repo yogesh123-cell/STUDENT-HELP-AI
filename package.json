@@ -1,0 +1,20 @@
+{
+  "name": "projectpilot-ai",
+  "version": "1.0.0",
+  "description": "AI Project Idea Generator & Implementation Assistant for Final-Year Students",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "backend": "uvicorn backend.main:app --reload --port 8000"
+  },
+  "keywords": [
+    "final-year-project",
+    "project-idea-generator",
+    "academic-projects",
+    "fastapi",
+    "gemini-ai",
+    "roadmap"
+  ],
+  "author": "ProjectPilot AI",
+  "license": "MIT"
+}
